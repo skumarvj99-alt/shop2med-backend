@@ -1,8 +1,8 @@
 # Use Node.js 23
 FROM node:23-alpine
 
-# Install Python and build tools for canvas package
-RUN apk add --no-cache python3 make g++ curl
+# Install Python, build tools, and canvas dependencies
+RUN apk add --no-cache python3 make g++ curl pkg-config cairo-dev pango-dev libjpeg-turbo-dev giflib-dev
 
 # Set working directory
 WORKDIR /app
