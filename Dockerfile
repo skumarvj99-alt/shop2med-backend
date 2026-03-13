@@ -1,5 +1,5 @@
-# Use Node.js 18 LTS
-FROM node:18-alpine
+# Use Node.js 23
+FROM node:23-alpine
 
 # Install curl for health check
 RUN apk add --no-cache curl
