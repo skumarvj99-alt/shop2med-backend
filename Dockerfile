@@ -1,8 +1,8 @@
 # Use Node.js 23
 FROM node:23-alpine
 
-# Install curl for health check
-RUN apk add --no-cache curl
+# Install Python and build tools for canvas package
+RUN apk add --no-cache python3 make g++ curl
 
 # Set working directory
 WORKDIR /app
@@ -11,7 +11,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 
 # Copy source code
 COPY . .
