@@ -2,7 +2,7 @@
 FROM node:23-alpine
 
 # Install Python, build tools, and canvas dependencies
-RUN apk add --no-cache python3 make g++ curl pkg-config cairo-dev pango-dev libjpeg-turbo-dev giflib-dev
+RUN apk add --no-cache python3 make g++ curl pkgconf cairo-dev pango-dev libjpeg-turbo-dev giflib-dev
 
 # Set working directory
 WORKDIR /app
